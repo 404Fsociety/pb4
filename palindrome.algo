@@ -1,0 +1,15 @@
+FUNCTION palindrome (arr : ARRAY_OF INTEGER[],n : INTEGER;) : BOOLEAN
+VAR
+    i : INTEGER:=0;
+    j : INTEGER:=n;
+    mid:=(j+i)/2;
+BEGIN
+    IF (arr[i]<>arr[j]) THEN
+        RETURN FALSE ;
+    ELSE
+        palindrome(arr,i+1,j-1);
+        IF ((arr[i]==arr[j]) and(i==j==mid)) THEN
+        RETURN TRUE;
+        END_IF
+    END_IF 
+END
